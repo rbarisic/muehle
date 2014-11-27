@@ -1,0 +1,95 @@
+* {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+body {
+	background: url('./background2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+input, button {
+	color: #333;
+}
+
+.viewport {
+
+	color: white;
+	margin: 0 auto;
+	width: 960px;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.title {
+	position: absolute;
+
+	top: 20px;
+	left: 200px;
+
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.spielfeld {
+	position: absolute;
+
+	top: 100px;
+	left: 200px;
+
+	width: 600px;
+	height: 600px;
+
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid rgba(255,255,255,0.5);
+}
+
+.info {
+	position: absolute;
+	overflow: auto;
+
+	top: 100px;
+	left: 800px;
+
+	width: 300px;
+	height: 600px;
+
+	background-color: rgba(0,0,0,0.8);
+	border: 1px solid rgba(255,255,255,0.5);
+}
+
+.spieler {
+	margin: 16px;
+	margin-bottom: 32px;
+}
+
+gametext {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.fr {
+	float: right;
+}
+
+.fl {
+	float: left;
+}
+
+.feld {
+	display: inline-block;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	background-color: #bbb;
+	border: 1px solid white;
+}
+
+.feld:hover {
+	color: #336;
+	background-color: #99f;
+}
+feld {
+
+}
+
+stein {
+
+}

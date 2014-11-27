@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.2/normalize.css">
+	<link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="./muehle.css">
+</head>
+
+<script src="./muehle.js"></script>
+
+<body>
+	
+	<div class="viewport">
+		
+		<div class="title">
+			<p>contemporary mill</p>
+		</div>		
+		<div class="spielfeld" id="spielfeld">
+		<script>
+			function refreshi() {
+				clearElementById('spielfeld')
+				for( i in Spielbrett ) {
+					addToElementById('spielfeld', '<div class="feld" style="top:' + (Spielbrett[i]['x'] * 64) + 'px;' + 'right:' + (Spielbrett[i]['y'] * 64) + 'px;' + '"onclick="setzen(this)" id="feld' +Spielbrett[i]['id'] + '">Feld</div>')
+					Spielbrett[i]['x'] += 1;
+					Spielbrett[i]['y'] += 1;
+				}
+			}
+
+			refreshi();
+
+			function setzen(onclick_this) {
+				feld = onclick_this.number
+				if (Spielbrett[feld]['besetzt'] == false) {
+					console.log('hat geklappt');
+				}
+				else {
+					console.log('netanjahu');
+				}
+			}
+		</script>
+		</div>
+
+		<div class="info">
+			<div class="spieler" id="spieler1">
+				<gametext>Eduart</gametext>
+				<gametext class="fr">8 Steine übrig</gametext>
+				<hr>
+				<gametext><img src="./stonewhite.png"></gametext>
+				<gametext><img src="./stonewhite.png"></gametext>
+				<gametext><img src="./stonewhite.png"></gametext>
+				<gametext><img src="./stonewhite.png"></gametext>
+				<gametext><img src="./stonewhite.png"></gametext>
+				<gametext><img src="./stonewhite.png"></gametext>
+				<gametext><img src="./stonewhite.png"></gametext>
+				<gametext><img src="./stonewhite.png"></gametext>
+			</div>
+
+			<div class="spieler" id="spieler2">
+				<gametext class="fr">9 Steine übrig</gametext>
+				<gametext>Hugo</gametext>
+				<hr>
+				<gametext><img src="./stoneblack.png"></gametext>
+				<gametext><img src="./stoneblack.png"></gametext>
+				<gametext><img src="./stoneblack.png"></gametext>
+				<gametext><img src="./stoneblack.png"></gametext>
+				<gametext><img src="./stoneblack.png"></gametext>
+				<gametext><img src="./stoneblack.png"></gametext>
+				<gametext><img src="./stoneblack.png"></gametext>
+				<gametext><img src="./stoneblack.png"></gametext>
+				<gametext><img src="./stoneblack.png"></gametext>
+			</div>
+
+			<div class="spieler">
+				<gametext>Debug</gametext>
+				<hr>
+				<button onclick="refreshi();" value="refresh!">move it!</button>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
